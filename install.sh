@@ -87,6 +87,9 @@ rm teamviewer.i686.rpm
 # pick repository
 # https://software.opensuse.org/package/filezilla
 
+# iostat
+zypper in sysstat
+
 # We love and need git
 zypper in git
 
