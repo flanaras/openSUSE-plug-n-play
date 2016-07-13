@@ -96,6 +96,8 @@ rm teamviewer.i686.rpm
 # FileZilla
 # pick repository
 # https://software.opensuse.org/package/filezilla
+# filezilla exists in tumbleweed repository
+sudo zypper in filezilla
 
 # iostat
 sudo zypper in sysstat
