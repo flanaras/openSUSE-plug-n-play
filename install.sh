@@ -1,5 +1,28 @@
 #! /usr/bin/sh
 
+REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/Leap_42.1
+REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/Tumbleweed
+REPO_X2GO=http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/openSUSE_Leap_42.1
+REPO_X2GO=http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/openSUSE_Tumbleweed
+
+GIT_REPO_SPOTIFY=https://github.com/flanaras/opensuse-spotify-installer
+
+DL_PACKAGE_XNVIEW=http://download.xnview.com/XnViewMP-linux.x86_64.rpm
+DL_PACKAGE_CHROME=https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+DL_PACKAGE_VIBER=http://download.cdn.viber.com/desktop/Linux/viber.rpm
+DL_PACKAGE_SKYPE=https://download.skype.com/linux/skype-4.3.0.37-suse.i586.rpm
+DL_PACKAGE_TEAMVIEWER=http://download.teamviewer.com/download/teamviewer.i686.rpm
+
+FILENAME_XNVIEW=XnViewMP-linux.x86_64.rpm
+FILENAME_CHROME=google-chrome-stable_current_x86_64.rpm
+FILENAME_VIBER=viber.rpm
+FILENAME_SKYPE=skype-4.3.0.37-suse.i586.rpm
+FILENAME_TEAMVIEWER=teamviewer.i686.rpm
+
+DL_COMPRESSED_ANDROID_STUDIO=https://dl.google.com/dl/android/studio/ide-zips/2.1.2.0/android-studio-ide-143.2915827-linux.zip
+DL_COMPRESSED_ANDROID_SDK=https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+DL_COMPRESSED_INTELLIJ=https://download-cf.jetbrains.com/idea/ideaIU-2016.1.3.tar.gz
+
 sudo zypper ref
 
 ## Git is needed for some applications
@@ -16,23 +39,21 @@ sudo zypper in fetchmsttfonts
 
 # We can't do anything without vlc
 sudo zypper rm vlc*
-# zypper ar http://download.videolan.org/pub/vlc/SuSE/Leap_42.1 VLC
-# for tumbleweed
-sudo zypper ar http://download.videolan.org/pub/vlc/SuSE/Tumbleweed VLC
+sudo zypper ar $REPO_VLC VLC
 sudo zypper mr -r VLC
 sudo zypper in vlc
 
 # A nice pdf viewer, I like more this than the default one
 sudo zypper in okular
 
-# Image viewer
-wget http://download.xnview.com/XnViewMP-linux.x86_64.rpm
+# Image viewer XnView
+wget $DL_PACKAGE_XNVIEW
 sudo zypper in XnViewMP-linux.x86_64.rpm
 rm XnViewMP-linux.x86_64.rpm
 
 # Spotify
 # https://github.com/flanaras/opensuse-spotify-installer
-git clone https://github.com/flanaras/opensuse-spotify-installer
+git clone $GIT_REPO_SPOTIFY
 ./opensuse-spotify-installer/install-spotify.sh
 rm -rf opensuse-spotify-installer
 
@@ -43,20 +64,20 @@ rm -rf opensuse-spotify-installer
 sudo zypper in opera
 
 # Chrome, when flash is necessary
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-sudo zypper in google-chrome-stable_current_x86_64.rpm
-rm google-chrome-stable_current_x86_64.rpm
+wget $DL_PACKAGE_CHROME
+sudo zypper in $FILENAME_CHROME
+rm $FILENAME_CHROME
 
 
 ## -- Messaging
-wget http://download.cdn.viber.com/desktop/Linux/viber.rpm
-sudo zypper in viber.rpm
-rm viber.rpm
+wget $DL_PACKAGE_VIBER
+sudo zypper in $FILENAME_VIBER
+rm $FILENAME_VIBER
 
 # Skype, ToDo: crawler 
-wget https://download.skype.com/linux/skype-4.3.0.37-suse.i586.rpm
-sudo zypper in skype-4.3.0.37-suse.i586.rpm
-rm skype-4.3.0.37-suse.i586.rpm
+wget $DL_PACKAGE_SKYPE
+sudo zypper in $FILENAME_SKYPE
+rm $FILENAME_SKYPE
 
 # Whatsie
 # https://github.com/Aluxian/Whatsie/releases
@@ -78,8 +99,7 @@ rm skype-4.3.0.37-suse.i586.rpm
 sudo zypper in dropbox
 
 # RemoteDesktopConnection
-#sudo zypper ar http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/openSUSE_Leap_42.1 x2go
-sudo zypper ar http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/openSUSE_Tumbleweed x2go
+sudo zypper ar $REPO_X2GO x2go
 sudo zypper mr -r x2go
 sudo zypper in x2goclient
 # If remote server is Windows the rdesktop is needed
@@ -89,9 +109,9 @@ sudo zypper in rdesktop
 sudo zypper in MozillaThunderbird
 
 # TeamViewer
-wget http://download.teamviewer.com/download/teamviewer.i686.rpm
-sudo zypper in teamviewer.i686.rpm
-rm teamviewer.i686.rpm
+wget $DL_PACKAGE_TEAMVIEWER
+sudo zypper in $FILENAME_TEAMVIEWER
+rm $FILENAME_TEAMVIEWER
 
 # FileZilla
 # pick repository
@@ -112,8 +132,8 @@ sudo zypper in nano
 
 # Tex and TexMaker can be necessary, although it is highly possible
 # that more that the standard packages will be needed
-#sudo zypper in texlive
-#sudo zypper in texmaker
+sudo zypper in texlive
+sudo zypper in texmaker
 #sudo zypper in texlive* # Not the best solution but the easiest
 
 # gcc, what do you need from gcc??
@@ -121,16 +141,16 @@ sudo zypper in nano
 
 ## -- IDEs
 # IntelliJ
-wget https://download-cf.jetbrains.com/idea/ideaIU-2016.1.3.tar.gz
+wget $DL_COMPRESSED_INTELLIJ
 printf "Unpack and Install IntellJ by yourself, not automated!\n"
 
 
 ## -- Android
 # Download Android SDK
-wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+wget $DL_COMPRESSED_ANDROID_SDK
 
 # Download Android Studio
-wget https://dl.google.com/dl/android/studio/ide-zips/2.1.2.0/android-studio-ide-143.2915827-linux.zip
+wget $DL_COMPRESSED_ANDROID_STUDIO
 
 print "Setup Android*! \n"
 
@@ -168,5 +188,11 @@ sudo zypper in alacarte
 
 # Disable sleep on lid-close
 
-
-
+## NetBIOS
+# 1. allow "Samba Client" service in firewall //allows nmblookup to work
+# 2. edit /etc/nsswitch.conf and add wins option
+#	hosts:	files mdns_minimal [NOTFOUND=return] dns wins
+# 	To ping enter netbiosname.local
+#	An other helpful program is nmblookup to search about a netbios name (without ".local")
+#		nmblookup name
+#		nmblookup -A xxx.xxx.xxx.xxx
