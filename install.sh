@@ -127,6 +127,9 @@ sudo zypper in sysstat
 # Make and patch are useful, I'm not a c[make] person...
 sudo zypper in make patch
 
+# Install a functional programming compiler (SML)
+sudo zypper in smlnj
+
 # Nano is useful
 sudo zypper in nano
 
