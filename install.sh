@@ -45,6 +45,8 @@ sudo zypper in vlc
 
 # A nice pdf viewer, I like more this than the default one
 sudo zypper in okular
+# KDE base is needed to load correctly the icons (I guess this could be done by installing the oxygen* icon pack and fonts)
+sudo zypper in -t pattern kde
 
 # Image viewer XnView
 wget $DL_PACKAGE_XNVIEW
