@@ -23,16 +23,16 @@ DL_COMPRESSED_ANDROID_STUDIO=https://dl.google.com/dl/android/studio/ide-zips/2.
 DL_COMPRESSED_ANDROID_SDK=https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
 DL_COMPRESSED_INTELLIJ=https://download-cf.jetbrains.com/idea/ideaIU-2016.1.3.tar.gz
 
+# Refresh before doing anything
 sudo zypper ref
 
 ## Git is needed for some applications
-#We love and need git
+# We love and need git
 sudo zypper in git
 
 ##### ----- Personal touches ----- #####
 # Adding a better font experience for our Linux environment
 sudo zypper in fetchmsttfonts
-
 
 
 ## -- Media
@@ -42,6 +42,9 @@ sudo zypper rm vlc*
 sudo zypper ar $REPO_VLC VLC
 sudo zypper mr -r VLC
 sudo zypper in vlc
+
+# Equalizer
+sudo zypper in pulseaudio-equalizer
 
 # A nice pdf viewer, I like more this than the default one
 sudo zypper in okular
@@ -76,7 +79,7 @@ wget $DL_PACKAGE_VIBER
 sudo zypper in $FILENAME_VIBER
 rm $FILENAME_VIBER
 
-# Skype, ToDo: crawler 
+# Skype, TODO: crawler 
 wget $DL_PACKAGE_SKYPE
 sudo zypper in $FILENAME_SKYPE
 rm $FILENAME_SKYPE
@@ -87,6 +90,7 @@ rm $FILENAME_SKYPE
 ## Other
 
 # flux?
+# No need.
 
 # vmware?
 
@@ -94,6 +98,7 @@ rm $FILENAME_SKYPE
 
 
 ##### ----- Work touches ----- #####
+
 
 ## -- Tools
 
@@ -124,13 +129,10 @@ sudo zypper in filezilla
 # iostat
 sudo zypper in sysstat
 
-# Git is needed earlier :D
+# Git is needed earlier, but this is its location
 
 # Make and patch are useful, I'm not a c[make] person...
 sudo zypper in make patch
-
-# Install a functional programming compiler (SML)
-sudo zypper in smlnj
 
 # Nano is useful
 sudo zypper in nano
@@ -143,6 +145,7 @@ sudo zypper in texmaker
 
 # gcc, what do you need from gcc??
 # zypper in gcc
+
 
 ## -- IDEs
 # IntelliJ
@@ -163,6 +166,9 @@ print "Setup Android*! \n"
 ##### ----- Work touches ----- #####
 # Tools missing for a kernel build
 sudo zypper in multipath-tools ncureses-devel
+
+
+
 
 ######## -------- System Settings -------- ########
 
@@ -201,3 +207,11 @@ sudo zypper in alacarte
 #	An other helpful program is nmblookup to search about a netbios name (without ".local")
 #		nmblookup name
 #		nmblookup -A xxx.xxx.xxx.xxx
+
+
+
+
+######## -------- Refresh and update packages -------- ########
+
+sudo zypper ref
+sudo zypper up
