@@ -4,6 +4,8 @@ REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/Leap_42.1
 REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/Tumbleweed
 REPO_X2GO=http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/openSUSE_Leap_42.1
 REPO_X2GO=http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/openSUSE_Tumbleweed
+REPO_MAVEN=http://download.opensuse.org/repositories/devel:/tools:/building/openSUSE_Leap_42.1
+REPO_MAVEN=http://download.opensuse.org/repositories/devel:/tools:/building/openSUSE_Factory
 
 GIT_REPO_SPOTIFY=https://github.com/flanaras/opensuse-spotify-installer
 
@@ -133,6 +135,11 @@ sudo zypper in sysstat
 
 # Make and patch are useful, I'm not a c[make] person...
 sudo zypper in make patch
+
+# Maven
+sudo zypper ar $REPO_MAVEN devel:tools:building
+sudo zypper mr -r devel:tools:building
+sudo zypper in maven
 
 # Nano is useful
 sudo zypper in nano
