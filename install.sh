@@ -42,6 +42,10 @@ git clone https://github.com/andreisergiu98/arc-flatabulous-theme && cd arc-flat
 ./autogen.sh --prefix=/usr
 sudo make install
 
+# Install fish shell
+sudo zypper in fish
+chsh -s /usr/bin/fish `whoami`
+
 ## -- Media
 
 # We can't do anything without vlc
