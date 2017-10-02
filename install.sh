@@ -36,6 +36,11 @@ sudo zypper in git
 # Adding a better font experience for our Linux environment
 sudo zypper in fetchmsttfonts
 
+# Add Arc-Flatabulous theme
+sudo zypper in gtk3-devel autoconf automake
+git clone https://github.com/andreisergiu98/arc-flatabulous-theme && cd arc-flatabulous-theme
+./autogen.sh --prefix=/usr
+sudo make install
 
 ## -- Media
 
