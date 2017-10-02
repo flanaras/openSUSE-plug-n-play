@@ -54,6 +54,9 @@ sudo make install
 sudo zypper in fish
 chsh -s /usr/bin/fish `whoami`
 
+# Pomodoro
+suzo zypper in gnome-pomodoro
+
 ## -- Media
 
 # We can't do anything without vlc
