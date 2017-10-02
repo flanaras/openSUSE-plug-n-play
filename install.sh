@@ -32,6 +32,14 @@ sudo zypper ref
 # We love and need git
 sudo zypper in git
 
+echo "[alias]
+	network = log --all --graph --decorate --oneline
+	fa = fetch --all
+	s = status
+[diff]
+	tool = vimdiff" >> ~/.gitconfig
+
+
 ##### ----- Personal touches ----- #####
 # Adding a better font experience for our Linux environment
 sudo zypper in fetchmsttfonts
