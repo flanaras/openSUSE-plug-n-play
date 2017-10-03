@@ -54,6 +54,10 @@ sudo make install
 sudo zypper in fish
 chsh -s /usr/bin/fish `whoami`
 
+# Add fzf to fish
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 # Pomodoro
 suzo zypper in gnome-pomodoro
 
