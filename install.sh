@@ -58,6 +58,9 @@ chsh -s /usr/bin/fish `whoami`
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+# Simple hack to get more vim extensions
+sudo zypper in gvim
+
 # Pomodoro
 suzo zypper in gnome-pomodoro
 
