@@ -1,0 +1,10 @@
+#! /usr/bin/sh
+
+# Fish
+## Install fish
+sudo zypper in fish
+chsh -s /usr/bin/fish `whoami`
+
+## Add fzf to fish
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install

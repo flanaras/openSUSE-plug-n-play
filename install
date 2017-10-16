@@ -50,27 +50,14 @@ git clone https://github.com/andreisergiu98/arc-flatabulous-theme && cd arc-flat
 ./autogen.sh --prefix=/usr
 sudo make install
 
-# Install fish shell
-sudo zypper in fish
-chsh -s /usr/bin/fish `whoami`
-
-# Add fzf to fish
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+# Set shell
+./fish-shell
 
 # Pomodoro
 suzo zypper in gnome-pomodoro
 
-## Vim stuff
-# Simple hack to get more vim extensions
-sudo zypper in gvim
-
-# Control P
-mkdir ~/.vim
-cd ~/.vim
-git clone https://github.com/ctrlpvim/ctrlp.vim.git bundle/ctrlp.vim
-cd -
-echo "set runtimepath^=~/.vim/bundle/ctrlp.vim" >> ~/.vimrc
+# Vim setup
+./vim
 
 ## -- Media
 
