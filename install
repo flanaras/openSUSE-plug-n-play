@@ -62,10 +62,9 @@ suzo zypper in gnome-pomodoro
 ## -- Media
 
 # We can't do anything without vlc
-sudo zypper rm vlc*
-sudo zypper ar $REPO_VLC VLC
-sudo zypper mr -r VLC
-sudo zypper in vlc
+sudo zypper ar $REPO_VLC vlc
+sudo zypper mr -r vlc
+sudo zypper dup -r vlc
 
 # Equalizer
 sudo zypper in pulseaudio-equalizer
