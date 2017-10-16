@@ -1,0 +1,17 @@
+#! /usr/bin/sh
+
+# Fonts
+## Monospace fonts
+monospace=google-inconsolata-fonts
+monospace="$monospace google-roboto-mono-fonts"
+
+## Other
+other=google-roboto-fonts
+
+# Adding a better font experience for our Linux environment
+other="$other fetchmsttfonts"
+
+# Get, show and execute command
+cmd="zypper in $monospace $other"
+echo $cmd
+sudo $cmd
