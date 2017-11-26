@@ -130,10 +130,6 @@ rm $FILENAME_SKYPE
 # Dropbox
 sudo zypper in dropbox
 
-# RemoteDesktopConnection
-sudo zypper ar $REPO_X2GO x2go
-sudo zypper mr -r x2go
-sudo zypper in x2goclient
 # If remote server is Windows the rdesktop is needed
 sudo zypper in rdesktop
 
@@ -163,9 +159,6 @@ sudo zypper in make patch
 sudo zypper ar $REPO_MAVEN devel:tools:building
 sudo zypper mr -r devel:tools:building
 sudo zypper in maven
-
-# Nano is useful
-sudo zypper in nano
 
 # Tex and TexMaker can be necessary, although it is highly possible
 # that more that the standard packages will be needed
