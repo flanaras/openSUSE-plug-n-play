@@ -15,17 +15,17 @@ fi
 
 GIT_REPO_SPOTIFY=https://github.com/flanaras/opensuse-spotify-installer
 
-DL_PACKAGE_XNVIEW=http://download.xnview.com/XnViewMP-linux.x86_64.rpm
-DL_PACKAGE_CHROME=https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-DL_PACKAGE_VIBER=http://download.cdn.viber.com/desktop/Linux/viber.rpm
-DL_PACKAGE_SKYPE=https://go.skype.com/skypeforlinux-64.rpm
-DL_PACKAGE_TEAMVIEWER=http://download.teamviewer.com/download/teamviewer.i686.rpm
-
 FILENAME_XNVIEW=XnViewMP-linux.x86_64.rpm
 FILENAME_CHROME=google-chrome-stable_current_x86_64.rpm
 FILENAME_VIBER=viber.rpm
-FILENAME_SKYPE=skype-4.3.0.37-suse.i586.rpm
+FILENAME_SKYPE=skypeforlinux-64.rpm
 FILENAME_TEAMVIEWER=teamviewer.i686.rpm
+
+DL_PACKAGE_XNVIEW=http://download.xnview.com/$FILENAME_XNVIEW
+DL_PACKAGE_CHROME=https://dl.google.com/linux/direct/$FILENAME_CHROME
+DL_PACKAGE_VIBER=http://download.cdn.viber.com/desktop/Linux/$FILENAME_VIBER
+DL_PACKAGE_SKYPE=https://go.skype.com/$FILENAME_SKYPE
+DL_PACKAGE_TEAMVIEWER=http://download.teamviewer.com/download/$FILENAME_TEAMVIEWER
 
 DL_COMPRESSED_ANDROID_STUDIO=https://dl.google.com/dl/android/studio/ide-zips/2.1.2.0/android-studio-ide-143.2915827-linux.zip
 DL_COMPRESSED_ANDROID_SDK=https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
