@@ -1,11 +1,17 @@
 #! /usr/bin/sh
 
-REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/Leap_42.1
-REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/Tumbleweed
-REPO_X2GO=http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/openSUSE_Leap_42.1
-REPO_X2GO=http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/openSUSE_Tumbleweed
-REPO_MAVEN=http://download.opensuse.org/repositories/devel:/tools:/building/openSUSE_Leap_42.1
-REPO_MAVEN=http://download.opensuse.org/repositories/devel:/tools:/building/openSUSE_Factory
+version="Leap_42.1"
+version="Tumbleweed"
+tumbleweed="Tumbleweed"
+version_tumbleweed_alt="openSUSE_Factory"
+
+REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/$version
+REPO_X2GO=http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/$version
+REPO_MAVEN=http://download.opensuse.org/repositories/devel:/tools:/building/$version
+
+if [ $version = $tumbleweed ] then
+	REPO_MAVEN=http://download.opensuse.org/repositories/devel:/tools:/building/$version_tumbleweed_alt
+fi
 
 GIT_REPO_SPOTIFY=https://github.com/flanaras/opensuse-spotify-installer
 
