@@ -1,0 +1,8 @@
+#! /usr/bin/sh
+
+# Fish
+## Reload profile to add omf
+source ~/.bash_profile
+
+## omf bang bang
+omf install bang-bang

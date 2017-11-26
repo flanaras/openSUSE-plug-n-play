@@ -1,0 +1,9 @@
+#! /usr/bin/sh
+
+# Fish
+## Install oh-my-fish
+curl -L https://get.oh-my.fish > install
+fish install --path=~/.local/share/omf --config=~/.config/omf
+
+## Reload profile to add omf
+source ~/.bash_profile

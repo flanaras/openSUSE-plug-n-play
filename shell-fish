@@ -6,15 +6,10 @@ sudo zypper in fish
 chsh -s /usr/bin/fish `whoami`
 
 ## Add fzf to fish
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+./shell-fish-fzf
 
 ## Install oh-my-fish
-curl -L https://get.oh-my.fish > install
-fish install --path=~/.local/share/omf --config=~/.config/omf
-
-## Reload profile to add omf
-source ~/.bash_profile
+./shell-fish-omf
 
 ## omf bang bang
-omf install bang-bang
+./shell-fish-omf-bb
