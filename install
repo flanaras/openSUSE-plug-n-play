@@ -18,7 +18,7 @@ GIT_REPO_SPOTIFY=https://github.com/flanaras/opensuse-spotify-installer
 DL_PACKAGE_XNVIEW=http://download.xnview.com/XnViewMP-linux.x86_64.rpm
 DL_PACKAGE_CHROME=https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 DL_PACKAGE_VIBER=http://download.cdn.viber.com/desktop/Linux/viber.rpm
-DL_PACKAGE_SKYPE=https://download.skype.com/linux/skype-4.3.0.37-suse.i586.rpm
+DL_PACKAGE_SKYPE=https://go.skype.com/skypeforlinux-64.rpm
 DL_PACKAGE_TEAMVIEWER=http://download.teamviewer.com/download/teamviewer.i686.rpm
 
 FILENAME_XNVIEW=XnViewMP-linux.x86_64.rpm
