@@ -2,7 +2,7 @@
 
 # Fish
 ## Reload profile to add omf
-source ~/.bash_profile
+fzf_key_bindings
 
 ## omf bang bang
 omf install bang-bang
