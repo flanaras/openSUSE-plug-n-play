@@ -5,6 +5,3 @@
 git clone https://github.com/oh-my-fish/oh-my-fish
 cd oh-my-fish
 bin/install --offline --path=~/.local/share/omf --config=~/.config/omf
-
-## Reload profile to add omf
-source ~/.bash_profile
