@@ -13,7 +13,8 @@ function fish_prompt
   end
 
   set -l fish     "⋊>"
-  set -l info     " "(hostname)
+  set -l me       " "(whoami)
+  set -l host     " "(hostname)
   set -l ahead    "↑"
   set -l behind   "↓"
   set -l diverged "⥄ "
@@ -27,9 +28,9 @@ function fish_prompt
   set -l repository_color (set_color $fish_color_cwd ^/dev/null; or set_color green)
 
   if test $last_command_status -eq 0
-    echo -n -s $success_color $fish $normal_color $error_color $info $normal_color
+    echo -n -s $success_color $fish $normal_color $me $error_color $host $normal_color
   else
-    echo -n -s $error_color $fish $normal_color $error_color $info $normal_color
+    echo -n -s $error_color $fish $normal_color $me $error_color $host $normal_color
   end
 
   if git_is_repo
@@ -37,12 +38,9 @@ function fish_prompt
       set root_folder (command git rev-parse --show-toplevel ^/dev/null)
       set parent_root_folder (dirname $root_folder)
       set cwd (echo $PWD | sed -e "s|$parent_root_folder/||")
-
-      echo -n -s " " $directory_color $cwd $normal_color
-    else
-      echo -n -s " " $directory_color $cwd $normal_color
     end
 
+    echo -n -s " " $directory_color $cwd $normal_color
     echo -n -s " on " $repository_color (git_branch_name) $normal_color " "
 
     if git_is_touched
@@ -56,3 +54,4 @@ function fish_prompt
 
   echo -n -s " "
 end
+
