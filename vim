@@ -6,3 +6,6 @@ sudo zypper in gvim
 
 ## Control P
 ./vim-ctrlp
+
+## Add vimrc directives
+./vimrc
