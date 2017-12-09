@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#!/bin/bash
 
 # Vim
 ## Simple hack to get more vim extensions
