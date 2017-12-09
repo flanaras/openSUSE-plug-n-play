@@ -55,7 +55,7 @@ sudo make install
 ./fish-shell
 
 # Pomodoro
-suzo zypper in gnome-pomodoro
+sudo zypper in gnome-pomodoro
 
 # Vim setup
 ./vim
