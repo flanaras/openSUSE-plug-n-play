@@ -13,3 +13,8 @@ chsh -s /usr/bin/fish `whoami`
 
 ## omf bang bang
 ./shell-fish-omf-bb
+
+## Copy promt configuration
+cd shell-fish-config
+./copy-conf.sh
+cd -
