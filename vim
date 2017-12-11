@@ -1,9 +1,13 @@
 #!/bin/bash
 
 # Vim
-## Simple hack to get more vim extensions
-sudo zypper in gvim
+#* Install
+## if parameter is set
+if [ "$1" = "install" ] || [ "$1" = "in" ]; then
+	./vim-dependencies
+fi
 
+#* Configurations
 ## Control P
 ./vim-ctrlp
 

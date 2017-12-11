@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Vim dependencies sdf
+## Simple hack to get more vim extensions
+sudo zypper in gvim
