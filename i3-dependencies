@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Music control buttons
+packages="playerctl"
+
+# Screenshot
+packages="$packages scrot"
+
+# Window manage
+packages="$packages compton"
+
+# Background
+packages="$packages feh"
+
+# i3 bar feeder
+packages="$packages conky"
+
+# Install packages
+zypper in $packages
