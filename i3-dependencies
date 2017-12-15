@@ -6,7 +6,7 @@ packages="playerctl"
 # Screenshot
 packages="$packages scrot"
 
-# Window manage
+# Compositor
 packages="$packages compton"
 
 # Background
