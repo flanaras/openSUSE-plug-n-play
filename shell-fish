@@ -2,8 +2,11 @@
 
 # Fish
 ## Install fish
-sudo zypper in fish
-chsh -s /usr/bin/fish `whoami`
+## if parameter is set
+if [ "$1" = "install" ] || [ "$1" = "in" ]; then
+	sudo zypper in fish
+	chsh -s /usr/bin/fish `whoami`
+fi
 
 ## Add fzf to fish
 ./shell-fish-fzf
