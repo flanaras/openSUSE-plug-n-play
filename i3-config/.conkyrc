@@ -1,0 +1,94 @@
+
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+
+# Update interval in seconds
+update_interval 1.0
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+short_units off
+
+#colour good: 88b090
+#88b090
+#:%s/foo/bar/g 
+
+#colour bad: e89393
+#e89393
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up, link or address, to check for the interface
+# being solely up, being up and having link or being up, having link
+# and an assigned IP address. 
+if_up_strictness address
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+# use_spacer should have an argument of left, right, or none
+use_spacer left
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+# template {"full_text": "", "color":"\#"},
+
+# Stuff after 'TEXT' will be formatted on screen
+TEXT
+[
+{"full_text": "${uptime}@${nodename}"},
+
+## Disk space
+{"full_text": "Disk: / ${exec df -h | grep " /\$" | awk '{ print $4 }'}"},
+
+## Volume
+{"full_text": "♪${color1}: ${exec amixer -D default get Master | grep Mono: | cut -d " " -f6 | tr -d '[]'}", "color":"${if_match "${exec amixer -D default get Master | grep Mono: | cut -d " " -f8 | tr -d '[]'}" == "on"}\#88b090${else}\#e89393${endif}"},
+
+## Network W
+# If down make red
+{"full_text": "Down:${downspeedf wlo1}KB/s"},
+{"full_text": "Up:${upspeedf wlo1}KB/s"},
+${if_match "${exec cat /sys/class/net/wlo1/operstate}" == "up"}
+{"full_text": "W: (${wireless_link_bar 1,10 wlo1} at ${wireless_essid wlo1})", "separator": false, "separator_block_width":3, "color":"\#88b090"},
+{"full_text": "${addr wlo1}", "color":"\#88b090", "separator":false, "separator_block_width":1},
+#{"full_text": "${exec curl icanhazip.com}", "color":"\#7f9f7f"},
+${else}
+{"full_text": "W: down", "color":"\#e89393"},
+${endif}
+
+## Network E
+# If down make red
+${if_match "${exec cat /sys/class/net/enp0s25/operstate}" == "up"}
+{"full_text": "E: ${addr enp0s25}", "color":"\#88b090"},
+${else}
+${if_match "${exec cat /sys/class/net/eth0/operstate}" == "up"}
+{"full_text": "E: ${addr eth0}", "color":"\#88b090"},
+${else}
+{"full_text": "E: down", "color":"\#e89393"},
+${endif}
+${else}
+{"full_text": "E: down", "color":"\#e89393"},
+${endif}
+
+## CPU utilisation
+{"full_text": "CPU:", "separator": false, "separator_block_width":3},
+{"full_text": "${cpu}%", "min_width":"000%", "separator": false, "separator_block_width":3, "color":"${if_match ${cpu} < 33}\#7f9f7f${else}${if_match ${cpu} > 66}\#e89393${else}\#c3bf9f${endif}${endif}"},
+
+## Memory
+{"full_text": "[r ${membar 1,10} ${memperc}]%", "min_width":"000%", "separator": false, "separator_block_width":3, "color":"${if_match ${memperc} < 33}\#7f9f7f${else}${if_match ${memperc} > 66}\#e89393${else}\#c3bf9f${endif}${endif}"},
+{"full_text": "${mem}/${memmax}", "color":"\#88b090"},
+
+
+## Battery
+{"full_text": "[b ${battery_bar 1,10 BAT0} ${battery_percent}%]", "min_width":"000%", "color":"${if_match ${battery_percent BAT0} > 66}\#7f9f7f${else}${if_match ${battery_percent BAT0} < 33}\#e89393${else}\#c3bf9f${endif}${endif}"},
+
+## Time
+{"full_text": "${time %Y-%m-%d %H:%M:%S}"}
+],
