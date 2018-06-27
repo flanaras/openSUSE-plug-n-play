@@ -57,7 +57,7 @@ TEXT
 {"full_text": "Up:${upspeedf wlo1}KB/s"},
 ${if_match "${exec cat /sys/class/net/wlo1/operstate}" == "up"}
 {"full_text": "W: (${wireless_link_bar 1,10 wlo1} at ${wireless_essid wlo1})", "separator": false, "separator_block_width":3, "color":"\#88b090"},
-{"full_text": "${addr wlo1}", "color":"\#88b090", "separator":false, "separator_block_width":1},
+{"full_text": "${addr wlo1} ", "color":"\#88b090", "separator":false, "separator_block_width":1},
 #{"full_text": "${exec curl icanhazip.com}", "color":"\#7f9f7f"},
 ${else}
 {"full_text": "W: down", "color":"\#e89393"},
@@ -83,6 +83,7 @@ ${endif}
 
 ## Memory
 {"full_text": "[r ${membar 1,10} ${memperc}]%", "min_width":"000%", "separator": false, "separator_block_width":3, "color":"${if_match ${memperc} < 33}\#7f9f7f${else}${if_match ${memperc} > 66}\#e89393${else}\#c3bf9f${endif}${endif}"},
+{"full_text": " ", "separator": false, "separator_block_width":3},
 {"full_text": "${mem}/${memmax}", "color":"\#88b090"},
 
 
