@@ -80,6 +80,9 @@ wget $DL_PACKAGE_XNVIEW
 sudo zypper in XnViewMP-linux.x86_64.rpm
 rm XnViewMP-linux.x86_64.rpm
 
+# Image editor
+sudo zypper in gthumb
+
 # Spotify
 # https://github.com/flanaras/opensuse-spotify-installer
 git clone $GIT_REPO_SPOTIFY
