@@ -259,8 +259,13 @@ exec_always "sleep 1; setxkbmap -option caps:swapescape -option altwin:swap_alt_
 #exec_always "sleep 1; setxkbmap -option altwin:swap_alt_win"
 #exec_always "sleep 1; setxkbmap -option caps:swapescape"
 
+# Open nautilus
+bindsym Mod1+e exec nautilus ~
+
+# Screen bindings
 bindsym XF86MonBrightnessUp exec light -A 3
 bindsym XF86MonBrightnessDown exec light -U 3 
+
 # Audio
 set $audio_device -D default
 bindsym $mod+F1 exec playerctl play
