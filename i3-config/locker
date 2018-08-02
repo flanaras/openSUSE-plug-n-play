@@ -30,5 +30,12 @@ BLURTYPE="0x4" #
 # Get the screenshot, add the blur and lock the screen with it
 $SCREENSHOT
 convert $IMAGE -blur $BLURTYPE $IMAGE
+
+## https://faq.i3wm.org/question/5654/how-can-i-disable-notifications-when-the-screen-locks-and-enable-them-again-when-unlocking/index.html
+# suspend message display
+pkill -u "$USER" -USR1 dunst
 i3lock -i $IMAGE
+# resume message display
+pkill -u "$USER" -USR2 dunst
+
 rm $IMAGE
