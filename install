@@ -83,6 +83,9 @@ rm XnViewMP-linux.x86_64.rpm
 # Image editor
 sudo zypper in gthumb
 
+# Run application after inactivity
+sudo zypper in xautolock
+
 # Spotify
 # https://github.com/flanaras/opensuse-spotify-installer
 git clone $GIT_REPO_SPOTIFY
