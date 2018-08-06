@@ -196,25 +196,25 @@ set $transparent #00000000
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        position top
-        status_command $HOME/.config/i3/runner
- 	#status_command $HOME/.config/i3/i3conky
-        #status_command $HOME/theScript
-	#status_command i3status -c ~/.config/i3/.i3status.conf
-
-	colors {
-        background         $transparent
-        separator          $transparent
-
-#                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent #b7f5ff
-        inactive_workspace $transparent $transparent #0c6d7c
-        active_workspace   $transparent $transparent #b7f5ff
-        urgent_workspace   $darkred     $darkred     $transparent
-# binding_mode $darkred $darkred $transparent
-	}
-}
+#bar {
+#        position top
+#        status_command $HOME/.config/i3/runner
+# 	#status_command $HOME/.config/i3/i3conky
+#        #status_command $HOME/theScript
+#	#status_command i3status -c ~/.config/i3/.i3status.conf
+#
+#	colors {
+#        background         $transparent
+#        separator          $transparent
+#
+##                          BORDER       BACKGROUND   TEXT
+#        focused_workspace  $transparent $transparent #b7f5ff
+#        inactive_workspace $transparent $transparent #0c6d7c
+#        active_workspace   $transparent $transparent #b7f5ff
+#        urgent_workspace   $darkred     $darkred     $transparent
+## binding_mode $darkred $darkred $transparent
+#	}
+#}
 client.placeholder #242424 #242424 #242424
 client.background #242424 #242424 #242424
 client.focused #4A4A4A #4A4A4A #e5e5e5 #4A4A4A
@@ -253,6 +253,7 @@ exec_always xset s off
 exec_always synclient MaxTapTime=0
 exec_always synclient set
 exec_always "dconf reset -f /desktop/ibus/ && dconf load /desktop/ibus/ < ~/.config/i3/ibus.dump"
+exec_always ~/.config/i3/polybar-launch
 
 # swap super with alt
 exec_always "sleep 1; setxkbmap -option caps:swapescape -option altwin:swap_alt_win"
