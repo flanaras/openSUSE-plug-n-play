@@ -12,6 +12,5 @@ other=google-roboto-fonts
 other="$other fetchmsttfonts"
 
 # Get, show and execute command
-cmd="zypper in $monospace $other"
+cmd="$monospace $other"
 echo $cmd
-sudo $cmd
