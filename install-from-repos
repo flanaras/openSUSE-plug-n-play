@@ -1,0 +1,100 @@
+#!/bin/bash
+
+cmd=
+
+##### ----- Personal touches ----- #####
+
+# Install fish shell
+cmd="$cmd fish"
+
+# Pomodoro
+# cmd="$cmd gnome-pomodoro"
+
+# Vim setup
+cmd="$cmd gvim"
+
+## -- Media
+
+# Equalizer
+cmd="$cmd pulseaudio-equalizer"
+
+# A nice pdf viewer, I like more this than the default one
+cmd="$cmd okular"
+
+# KDE base is needed to load correctly the icons (I guess this could be done by installing the oxygen* icon pack and fonts)
+# sudo zypper in -t pattern kde
+
+# Image editor
+cmd="$cmd gthumb"
+
+# Run application after inactivity
+cmd="$cmd xautolock"
+
+## -- Browsers
+
+# Opera, for an alternative of firefox
+cmd="$cmd opera"
+
+## Other
+
+# VM necessities
+cmd="$cmd virtualbox"
+
+
+##### ----- Work touches ----- #####
+
+## -- Tools
+
+# Dropbox
+cmd="$cmd dropbox-cli"
+
+# If remote server is Windows then rdesktop is needed
+cmd="$cmd rdesktop"
+
+# Mail Client (Thunderbird)
+cmd="$cmd MozillaThunderbird"
+
+# FileZilla
+# cmd="$cmd filezilla"
+
+# iostat
+cmd="$cmd sysstat"
+
+# terminal
+cmd="$cmd rxvt-unicode"
+
+# We love and need git
+cmd="$cmd git"
+
+# Make and patch are useful, I'm not a c[make] person...
+cmd="$cmd make patch"
+
+
+# Tex and TexMaker can be necessary, although it is highly possible
+# that more that the standard packages will be needed
+# cmd="$cmd texlive"
+# cmd="$cmd texmaker"
+# cmd="$cmd texlive*" # Not the best solution but the easiest
+
+# gcc, what do you need from gcc??
+cmd="$cmd gcc"
+
+# Keepassxc
+cmd="$cmd keepassxc"
+
+##### ----- Work touches ----- #####
+# Tools missing for a kernel build
+cmd="$cmd multipath-tools ncureses-devel"
+
+# Main menu editor is not installed by default
+cmd="$cmd alacarte"
+
+# i3 with dependencies 
+cmd=`echo $cmd i3 \`./i3-dependencies\``
+
+# fonts
+cmd=`echo $cmd \`./fonts\``
+
+echo $cmd 
+
+######## -------- Refresh and update packages -------- ########

@@ -1,0 +1,53 @@
+#!/bin/bash
+
+
+# Viber
+FILENAME_VIBER=viber.rpm
+DL_PACKAGE_VIBER=https://download.cdn.viber.com/desktop/Linux/$FILENAME_VIBER
+
+# TeamViewer
+FILENAME_TEAMVIEWER=teamviewer-suse.x86_64.rpm
+DL_PACKAGE_TEAMVIEWER=https://download.teamviewer.com/download/linux/$FILENAME_TEAMVIEWER
+
+# Skype
+FILENAME_SKYPE=skypeforlinux-64.rpm
+DL_PACKAGE_SKYPE=https://go.skype.com/$FILENAME_SKYPE
+
+# Chrome
+FILENAME_CHROME=google-chrome-stable_current_x86_64.rpm
+DL_PACKAGE_CHROME=https://dl.google.com/linux/direct/$FILENAME_CHROME
+
+# XnView
+FILENAME_XNVIEW=XnViewMP-linux.x86_64.rpm
+DL_PACKAGE_XNVIEW=http://download.xnview.com/$FILENAME_XNVIEW
+
+# IntelliJ
+DL_COMPRESSED_INTELLIJ=https://download-cf.jetbrains.com/idea/ideaIU-2016.1.3.tar.gz
+
+# Android
+DL_COMPRESSED_ANDROID_STUDIO=https://dl.google.com/dl/android/studio/ide-zips/2.1.2.0/android-studio-ide-143.2915827-linux.zip
+DL_COMPRESSED_ANDROID_SDK=https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+
+
+cmd=
+
+# Image viewer XnView
+wget $DL_PACKAGE_XNVIEW
+cmd="$cmd $FILENAME_XNVIEW"
+
+# Chrome, when flash is necessary
+wget $DL_PACKAGE_CHROME
+cmd="$cmd $FILENAME_CHROME"
+
+## -- Messaging
+wget $DL_PACKAGE_VIBER
+cmd="$cmd $FILENAME_VIBER"
+
+wget $DL_PACKAGE_SKYPE
+cmd="$cmd $FILENAME_SKYPE"
+
+# TeamViewer
+wget $DL_PACKAGE_TEAMVIEWER
+cmd="$cmd $FILENAME_TEAMVIEWER"
+
+echo $cmd

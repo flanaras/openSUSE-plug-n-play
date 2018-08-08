@@ -1,0 +1,23 @@
+#!/bin/bash
+
+version="Leap_15.0"
+tumbleweed="Tumbleweed"
+version_tumbleweed_alt="openSUSE_Factory"
+
+REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/$version
+REPO_MAVEN=http://download.opensuse.org/repositories/devel:/tools:/building/$version
+
+# if [ $version = $tumbleweed ] then
+# 	REPO_MAVEN="http://download.opensuse.org/repositories/devel:/tools:/building/$version_tumbleweed_alt"
+# fi
+
+
+# We can't do anything without vlc
+echo "sudo zypper ar $REPO_VLC vlc"
+echo "sudo zypper mr -r vlc"
+echo "sudo zypper in vlc"
+
+# Maven
+# sudo zypper ar $REPO_MAVEN devel:tools:building
+# sudo zypper mr -r devel:tools:building
+# sudo zypper in maven
