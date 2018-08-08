@@ -12,8 +12,5 @@ packages="$packages compton"
 # Background
 packages="$packages feh"
 
-# i3 bar feeder
-packages="$packages conky"
-
-# Install packages
-zypper in $packages
+# echo packages
+echo $packages
