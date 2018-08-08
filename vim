@@ -1,10 +1,12 @@
 #!/bin/bash
 
+cd vim-rest
+
 # Vim
-#* Install
+# Install
 ## if parameter is set
 if [ "$1" = "install" ] || [ "$1" = "in" ]; then
-	./vim-dependencies
+	sudo zypper in ./vim-dependencies
 fi
 
 #* Configurations
@@ -13,3 +15,5 @@ fi
 
 ## Add vimrc directives
 ./vimrc
+
+cd -

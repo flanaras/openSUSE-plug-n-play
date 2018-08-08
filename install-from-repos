@@ -58,7 +58,7 @@ cmd="$cmd MozillaThunderbird"
 # cmd="$cmd filezilla"
 
 # iostat
-cmd="$cmd sysstat"
+# cmd="$cmd sysstat"
 
 # terminal
 cmd="$cmd rxvt-unicode"

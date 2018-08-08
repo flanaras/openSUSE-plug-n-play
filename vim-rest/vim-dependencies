@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cmd=
+
 # Vim dependencies
 ## Simple hack to get more vim extensions
-sudo zypper in gvim
+cmd="$cmd gvim"
+
+echo $cmd
