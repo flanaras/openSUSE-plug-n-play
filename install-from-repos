@@ -66,18 +66,16 @@ cmd="$cmd rxvt-unicode"
 # We love and need git
 cmd="$cmd git"
 
-# Make and patch are useful, I'm not a c[make] person...
-cmd="$cmd make patch"
-
+# build tools
+cmd="$cmd make patch autoconf automake cmake"
+cmd="$cmd gcc gcc-c++"
+cmd="$cmd tree"
 
 # Tex and TexMaker can be necessary, although it is highly possible
 # that more that the standard packages will be needed
 # cmd="$cmd texlive"
 # cmd="$cmd texmaker"
 # cmd="$cmd texlive*" # Not the best solution but the easiest
-
-# gcc, what do you need from gcc??
-cmd="$cmd gcc"
 
 # Keepassxc
 cmd="$cmd keepassxc"
