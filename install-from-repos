@@ -48,8 +48,8 @@ cmd="$cmd virtualbox"
 # Dropbox
 cmd="$cmd dropbox-cli"
 
-# If remote server is Windows then rdesktop is needed
-cmd="$cmd rdesktop"
+# Windows remote connection
+cmd="$cmd remmina"
 
 # Mail Client (Thunderbird)
 cmd="$cmd MozillaThunderbird"
