@@ -12,5 +12,8 @@ packages="$packages compton"
 # Background
 packages="$packages feh"
 
+# Notifications
+packages="$packages dunst"
+
 # echo packages
 echo $packages
