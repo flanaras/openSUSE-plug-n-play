@@ -4,20 +4,20 @@
 ## Install fish
 ## if parameter is set
 if [ "$1" = "install" ] || [ "$1" = "in" ]; then
-	sudo zypper in fish
-	chsh -s /usr/bin/fish `whoami`
+	echo sudo zypper in fish
+	echo chsh -s /usr/bin/fish `whoami`
 fi
 
 ## Add fzf to fish
-./shell-fish-fzf
+fish-shell-rest/shell-fish-fzf
 
 ## Install oh-my-fish
-./shell-fish-omf
+fish-shell-rest/shell-fish-omf
 
 ## omf bang bang
-./shell-fish-omf-bb
+fish-shell-rest/shell-fish-omf-bb
 
 ## Copy promt configuration
-cd dotfiles/fish-functions
-./copy-conf.sh
-cd -
+#cd dotfiles/fish-functions
+#./copy-conf.sh
+#cd -
