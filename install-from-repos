@@ -84,7 +84,7 @@ cmd="$cmd keepassxc"
 
 ##### ----- Work touches ----- #####
 # Tools missing for a kernel build
-cmd="$cmd multipath-tools ncureses-devel"
+cmd="$cmd multipath-tools ncurses-devel"
 
 # Main menu editor is not installed by default
 cmd="$cmd alacarte"
