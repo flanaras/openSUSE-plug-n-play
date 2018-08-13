@@ -10,6 +10,7 @@ other=google-roboto-fonts
 
 # Adding a better font experience for our Linux environment
 other="$other fetchmsttfonts"
+other="$other fontawesome-fonts"
 
 # Get, show and execute command
 cmd="$monospace $other"
