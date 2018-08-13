@@ -90,7 +90,7 @@ cmd="$cmd multipath-tools ncurses-devel"
 cmd="$cmd alacarte"
 
 # i3 with dependencies 
-cmd=`echo $cmd i3 \`./i3-dependencies\``
+cmd=`echo $cmd i3 \`i3-rest/i3-dependencies\``
 
 # fonts
 cmd=`echo $cmd \`./fonts\``
