@@ -35,17 +35,22 @@ wget $DL_PACKAGE_XNVIEW
 cmd="$cmd $FILENAME_XNVIEW"
 
 # Chrome, when flash is necessary
+wget https://dl.google.com/linux/linux_signing_key.pub 
+echo sudo rpm --import linux_signing_key.pub 
 wget $DL_PACKAGE_CHROME
 cmd="$cmd $FILENAME_CHROME"
 
-## -- Messaging
+# Viber
 wget $DL_PACKAGE_VIBER
 cmd="$cmd $FILENAME_VIBER"
 
+# Skype
 wget $DL_PACKAGE_SKYPE
 cmd="$cmd $FILENAME_SKYPE"
 
 # TeamViewer
+wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc
+echo sudo rpm --import TeamViewer2017.asc
 wget $DL_PACKAGE_TEAMVIEWER
 cmd="$cmd $FILENAME_TEAMVIEWER"
 
