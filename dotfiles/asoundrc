@@ -1,4 +1,4 @@
-pcm.!default {
+pcm.!default {   # "!" means "override" the previous definition
 	type hw
 	card PCH
 }
