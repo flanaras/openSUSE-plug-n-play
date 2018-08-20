@@ -15,5 +15,8 @@ packages="$packages feh"
 # Notifications
 packages="$packages dunst"
 
+# Touch pad
+packages="$packages xorg-x11-driver-input xf86-input-libinput"
+
 # echo packages
 echo $packages
