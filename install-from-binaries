@@ -45,11 +45,13 @@ wget $DL_PACKAGE_VIBER
 cmd="$cmd $FILENAME_VIBER"
 
 # Skype
+wget https://repo.skype.com/rpm/stable/repodata/repomd.xml.key
+echo sudo rpm --import repomd.xml.key
 wget $DL_PACKAGE_SKYPE
 cmd="$cmd $FILENAME_SKYPE"
 
 # TeamViewer
-wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc
+wget https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc
 echo sudo rpm --import TeamViewer2017.asc
 wget $DL_PACKAGE_TEAMVIEWER
 cmd="$cmd $FILENAME_TEAMVIEWER"
