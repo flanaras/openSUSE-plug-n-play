@@ -1,0 +1,8 @@
+> rsync -avhe  "ssh -o Compression=no -x -p 443" --progress server:/s/r/c dest
+> scp -P 8522 user@server:~/src .
+> ssh -J user@full-server:8522 user@second-server
+> scp -P 443 -oProxyJump=user@jump-server server:/s/r/c/ .
+> udisksctl unlock -b /dev/sdb1; and udisksctl mount -b /dev/dm-1
+> ssh server -p 443 -D 3128 -L 8113:localhost:8113
+> sudo netconfig -f update
+> sudo systemctl stop openvpn@vpn-certificate.service
