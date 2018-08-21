@@ -6,16 +6,22 @@ version_tumbleweed_alt="openSUSE_Factory"
 
 REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/$version
 REPO_MAVEN=http://download.opensuse.org/repositories/devel:/tools:/building/$version
-
-# if [ $version = $tumbleweed ] then
-# 	REPO_MAVEN="http://download.opensuse.org/repositories/devel:/tools:/building/$version_tumbleweed_alt"
-# fi
+packmanessentials=http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_$version/Essentials
+mozilla=http://download.opensuse.org/repositories/mozilla/openSUSE_$version/
 
 
-# We can't do anything without vlc
-echo "sudo zypper ar $REPO_VLC vlc"
-echo "sudo zypper mr -r vlc"
-echo "sudo zypper in vlc"
+# Vlc
+# echo "sudo zypper ar $REPO_VLC vlc"
+# echo "sudo zypper mr -r vlc"
+# echo "sudo zypper in vlc"
+
+# Packman codecs
+echo sudo zypper ar -cfp 90 $packmanessentials packman-essentials 
+echo zypper dup --from packman
+
+# Mozilla
+echo sudo zypper ar -cfp 90 $mozilla mozilla
+echo zypper dup --from mozilla
 
 # Maven
 # sudo zypper ar $REPO_MAVEN devel:tools:building
