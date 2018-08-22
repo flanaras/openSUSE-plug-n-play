@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Base developer pattern
+echo sudo zypper in -t pattern devel_basis
