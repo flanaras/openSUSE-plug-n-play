@@ -66,6 +66,9 @@ cmd="$cmd rxvt-unicode"
 # We love and need git
 cmd="$cmd git"
 
+# Htop
+cmd="$cmd htop"
+
 # build tools
 cmd="$cmd make patch autoconf automake cmake"
 cmd="$cmd gcc gcc-c++"
