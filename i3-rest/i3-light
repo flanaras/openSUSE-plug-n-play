@@ -1,6 +1,15 @@
 #!/bin/bash
 
+lightversion=1.1.2
+light=light-$lightversion
+
 # Light
-git clone https://github.com/haikarainen/light.git
-cd light
-sudo bash -c "make && make install"
+wget --content-disposition https://github.com/haikarainen/light/archive/$lightversion.tar.gz
+tar xf $light.tar.gz
+
+cd $light/
+make
+sudo bash -c "make install"
+cd -
+
+rm $light.tar.gz
