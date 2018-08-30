@@ -1,6 +1,7 @@
 #!/bin/bash
 
 version="Leap_15.0"
+version="Tumbleweed"
 tumbleweed="Tumbleweed"
 version_tumbleweed_alt="openSUSE_Factory"
 
@@ -8,7 +9,7 @@ REPO_VLC=http://download.videolan.org/pub/vlc/SuSE/$version
 REPO_MAVEN=http://download.opensuse.org/repositories/devel:/tools:/building/$version
 packmanessentials=http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_$version/Essentials
 mozilla=http://download.opensuse.org/repositories/mozilla/openSUSE_$version/
-
+polybar=http://download.opensuse.org/repositories/home:/sysek/openSUSE_$version/
 
 # Vlc
 # echo "sudo zypper ar $REPO_VLC vlc"
@@ -17,11 +18,14 @@ mozilla=http://download.opensuse.org/repositories/mozilla/openSUSE_$version/
 
 # Packman codecs
 echo sudo zypper ar -cfp 90 $packmanessentials packman-essentials 
-echo zypper dup --from packman
+echo sudo zypper dup --from packman-essentials
 
 # Mozilla
 echo sudo zypper ar -cfp 90 $mozilla mozilla
-echo zypper dup --from mozilla
+echo sudo zypper dup --from mozilla
+
+echo sudo zypper ar -cfp 99 $polybar polybar
+echo sudo zypper in polybar
 
 # Maven
 # sudo zypper ar $REPO_MAVEN devel:tools:building
