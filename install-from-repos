@@ -18,6 +18,9 @@ cmd="$cmd gvim"
 # Equalizer
 cmd="$cmd pulseaudio-equalizer"
 
+# Pavucontrol
+cmd="$cmd pavucontrol"
+
 # A nice pdf viewer, I like more this than the default one
 cmd="$cmd okular"
 
