@@ -69,6 +69,9 @@ cmd="$cmd rxvt-unicode"
 # We love and need git
 cmd="$cmd git"
 
+# Xinput
+cmd="$cmd xinput"
+
 # Htop
 cmd="$cmd htop"
 
