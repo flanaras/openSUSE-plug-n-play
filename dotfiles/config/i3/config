@@ -241,7 +241,7 @@ exec compton --backend glx --vsync opengl-mswc -b
 # Startup programs
 exec --no-startup-id dropbox start
 exec thunderbird
-exec bash -c "LD_PRELOAD=/usr/lib64/libcurl.so.4:~/spotifywm/spotifywm.so /usr/bin/spotify"
+exec spotify
 exec slack
 exec opera
 exec xautolock -detectsleep -time 5 -locker "~/.config/i3/locker" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
