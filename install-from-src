@@ -11,6 +11,8 @@ GIT_REPO_SPOTIFY=https://github.com/flanaras/opensuse-spotify-installer
 # Spotify
 # https://github.com/flanaras/opensuse-spotify-installer
 git clone $GIT_REPO_SPOTIFY
-./opensuse-spotify-installer/install-spotify.sh
+cd opensuse-spotify-installer
+./install-spotify.sh
+cd -
 rm -rf opensuse-spotify-installer
 
