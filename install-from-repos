@@ -61,7 +61,7 @@ cmd="$cmd MozillaThunderbird"
 # cmd="$cmd filezilla"
 
 # iostat
-# cmd="$cmd sysstat"
+cmd="$cmd sysstat"
 
 # terminal
 cmd="$cmd rxvt-unicode"
@@ -89,10 +89,10 @@ cmd="$cmd tree"
 # Keepassxc
 cmd="$cmd keepassxc"
 
-##### ----- Work touches ----- #####
 # Tools missing for a kernel build
 cmd="$cmd multipath-tools ncurses-devel"
 
+##### ----- Other touches ----- #####
 # Main menu editor is not installed by default
 cmd="$cmd alacarte"
 
