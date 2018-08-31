@@ -30,6 +30,9 @@ cmd="$cmd okular"
 # Image editor
 cmd="$cmd gthumb"
 
+# Keepassxc
+cmd="$cmd keepassxc"
+
 # Run application after inactivity
 cmd="$cmd xautolock"
 
@@ -86,20 +89,20 @@ cmd="$cmd tree"
 # cmd="$cmd texmaker"
 # cmd="$cmd texlive*" # Not the best solution but the easiest
 
-# Keepassxc
-cmd="$cmd keepassxc"
 
 # Tools missing for a kernel build
 cmd="$cmd multipath-tools ncurses-devel"
 
-##### ----- Other touches ----- #####
+##### ----- Convenience touches ----- #####
 # Main menu editor is not installed by default
 cmd="$cmd alacarte"
 
+
+##### ----- Personalisation ----- #####
 # i3 with dependencies 
 cmd=`echo $cmd i3 \`i3-rest/i3-dependencies\``
 
-# fonts
+# Required fonts
 cmd=`echo $cmd \`./fonts\``
 
 echo $cmd 
