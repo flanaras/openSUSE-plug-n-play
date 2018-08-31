@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp *.fish ~/.config/fish/functions
+cp *.fish ~/.config/fish/functions/
