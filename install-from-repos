@@ -97,6 +97,11 @@ cmd="$cmd multipath-tools ncurses-devel"
 # Main menu editor is not installed by default
 cmd="$cmd alacarte"
 
+# Su on graphical applications (gnomesu)
+cmd="$cmd libgnomesu"
+
+# gnome-open
+cmd="$cmd libgnome"
 
 ##### ----- Personalisation ----- #####
 # i3 with dependencies 
