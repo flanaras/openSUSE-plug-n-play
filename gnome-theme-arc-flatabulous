@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo stale information here
+echo check out https://github.com/andreisergiu98/arc-flatabulous-theme for installation information.
+# Add Arc-Flatabulous theme
+# sudo zypper in gtk3-devel autoconf automake
+# sudo zypper in gtk2-engine-murrine
+# git clone https://github.com/andreisergiu98/arc-flatabulous-theme --depth 1
+# cd arc-flatabulous-theme
+# ./autogen.sh --prefix=/usr
+# sudo make install
+# cd -
+# rm -rf arc-flatabulous-theme
+
