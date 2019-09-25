@@ -17,6 +17,5 @@ sudo chown root:root profile.conf
 Interacting with OpenVPN via systemctl.
 
 ```
-# Start
 sudo systemctl {start, stop, status} openvpn@profile
 ```
