@@ -1,9 +1,0 @@
-pcm.!default {   # "!" means "override" the previous definition
-	type hw
-	card PCH
-}
-
-ctl.!default {
-	type hw           
-	card PCH
-}
