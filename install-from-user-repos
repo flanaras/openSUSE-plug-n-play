@@ -11,6 +11,7 @@ maven=http://download.opensuse.org/repositories/devel:/tools:/building/$version
 packmanessentials=http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_$version/Essentials
 mozilla=http://download.opensuse.org/repositories/mozilla/openSUSE_$version/
 polybar=http://download.opensuse.org/repositories/home:/sysek/openSUSE_$version/
+fonts=http://download.opensuse.org/repositories/M17N:/fonts/openSUSE_$version/
 
 # Vlc
 ## Install vlc from packman
@@ -30,6 +31,10 @@ echo sudo zypper ar -cfp 90 $mozilla mozilla
 echo sudo zypper dup --from mozilla
 
 echo -e "\033[1;31m$string\033[0m"
+
+# Fonts
+echo sudo zypper ar -cfp 99 $fonts fonts
+echo sudo zypper mr -r fonts
 
 # Polybar
 echo sudo zypper ar -cfp 99 $polybar polybar
