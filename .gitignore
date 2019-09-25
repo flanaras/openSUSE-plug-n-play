@@ -19,3 +19,9 @@ tags
 *.asc
 *.pub
 *.key
+
+# build folder for light
+i3-rest/light-*
+
+# repository for oh-my-fish
+oh-my-fish/
