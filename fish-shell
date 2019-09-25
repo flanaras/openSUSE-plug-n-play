@@ -16,8 +16,3 @@ fish-shell-rest/shell-fish-omf
 
 ## omf bang bang
 fish-shell-rest/shell-fish-omf-bb
-
-## Copy promt configuration
-#cd dotfiles/fish-functions
-#./copy-conf.sh
-#cd -
