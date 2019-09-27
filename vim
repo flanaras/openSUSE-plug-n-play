@@ -13,7 +13,4 @@ fi
 ## Control P
 ./vim-ctrlp
 
-## Add vimrc directives
-./vimrc
-
 cd -
