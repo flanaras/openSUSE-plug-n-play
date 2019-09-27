@@ -33,8 +33,8 @@ echo sudo zypper dup --from mozilla
 echo -e "\033[1;31m$string\033[0m"
 
 # Fonts
-echo sudo zypper ar -cfp 99 $fonts fonts
-echo sudo zypper mr -r fonts
+echo sudo zypper ar -cfp 90 $fonts fonts
+echo sudo zypper dup --from fonts
 
 # Polybar
 echo sudo zypper ar -cfp 99 $polybar polybar
