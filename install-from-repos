@@ -108,7 +108,7 @@ cmd="$cmd libgnome"
 cmd=`echo $cmd i3 \`i3-rest/i3-dependencies\``
 
 # Required fonts
-cmd=`echo $cmd \`./fonts\``
+cmd=`echo $cmd \`./packages-fonts\``
 
 echo $cmd 
 
