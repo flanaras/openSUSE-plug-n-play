@@ -8,11 +8,13 @@ if [ "$1" = "install" ] || [ "$1" = "in" ]; then
 	echo chsh -s /usr/bin/fish `whoami`
 fi
 
+cd rest
 ## Add fzf to fish
-rest/shell-fish-fzf
+shell-fish-fzf
 
 ## Install oh-my-fish
-rest/shell-fish-omf
+shell-fish-omf
 
 ## omf bang bang
-rest/shell-fish-omf-bb
+shell-fish-omf-bb
+cd -
