@@ -9,10 +9,10 @@ if [ "$1" = "install" ] || [ "$1" = "in" ]; then
 fi
 
 ## Add fzf to fish
-fish-shell-rest/shell-fish-fzf
+rest/shell-fish-fzf
 
 ## Install oh-my-fish
-fish-shell-rest/shell-fish-omf
+rest/shell-fish-omf
 
 ## omf bang bang
-fish-shell-rest/shell-fish-omf-bb
+rest/shell-fish-omf-bb

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd vim-rest
+cd rest
 
 # Vim
 # Install
