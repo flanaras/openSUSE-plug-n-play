@@ -25,3 +25,6 @@ i3-rest/light-*
 
 # repository for oh-my-fish
 oh-my-fish/
+
+# Proprietary binaries temp
+proprietary-binaries-temp/

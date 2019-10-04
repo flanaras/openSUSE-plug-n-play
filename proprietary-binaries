@@ -22,14 +22,6 @@ DL_PACKAGE_CHROME=https://dl.google.com/linux/direct/$FILENAME_CHROME
 FILENAME_XNVIEW=XnViewMP-linux.x86_64.rpm
 DL_PACKAGE_XNVIEW=http://download.xnview.com/$FILENAME_XNVIEW
 
-# IntelliJ
-DL_COMPRESSED_INTELLIJ=https://download-cf.jetbrains.com/idea/ideaIU-2016.1.3.tar.gz
-
-# Android
-DL_COMPRESSED_ANDROID_STUDIO=https://dl.google.com/dl/android/studio/ide-zips/2.1.2.0/android-studio-ide-143.2915827-linux.zip
-DL_COMPRESSED_ANDROID_SDK=https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
-
-
 # Image viewer XnView
 wget $DL_PACKAGE_XNVIEW
 cmd="$cmd $FILENAME_XNVIEW"
