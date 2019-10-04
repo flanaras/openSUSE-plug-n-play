@@ -8,16 +8,13 @@ if [ "$1" = "install" ] || [ "$1" = "in" ]; then
 	echo chsh -s /usr/bin/fish `whoami`
 fi
 
+cd rest
 ## Add fzf to fish
-fish-shell-rest/shell-fish-fzf
+shell-fish-fzf
 
 ## Install oh-my-fish
-fish-shell-rest/shell-fish-omf
+shell-fish-omf
 
 ## omf bang bang
-fish-shell-rest/shell-fish-omf-bb
-
-## Copy promt configuration
-#cd dotfiles/fish-functions
-#./copy-conf.sh
-#cd -
+shell-fish-omf-bb
+cd -

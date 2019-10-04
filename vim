@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd vim-rest
+cd rest
 
 # Vim
 # Install
@@ -12,8 +12,5 @@ fi
 #* Configurations
 ## Control P
 ./vim-ctrlp
-
-## Add vimrc directives
-./vimrc
 
 cd -

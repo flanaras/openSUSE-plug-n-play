@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo "DO NOT forget to install i3-light, polybar, vim-plugings and fish-*"
-
-echo https://software.opensuse.org/package/polybar polybar

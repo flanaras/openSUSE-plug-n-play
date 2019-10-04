@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd i3-rest/
+cd rest/
 
 # Light
 ./i3-light

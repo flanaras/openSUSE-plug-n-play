@@ -1,8 +1,0 @@
-#!/bin/bash
-
-version="Leap_15.0"
-
-fonts=http://download.opensuse.org/repositories/M17N:/fonts/openSUSE_$version/
-
-echo "sudo zypper ar $fonts fonts"
-echo "sudo zypper mr -r fonts"
