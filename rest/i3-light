@@ -1,13 +1,14 @@
 #!/bin/bash
 
-lightversion=1.1.2
+lightversion=1.2
 light=light-$lightversion
 
 # Light
-wget --content-disposition https://github.com/haikarainen/light/archive/$lightversion.tar.gz
+wget --content-disposition https://github.com/haikarainen/light/releases/download/v$lightversion/$light.tar.gz
 tar xf $light.tar.gz
 
 cd $light/
+./configure
 make
 sudo bash -c "make install"
 cd -
