@@ -1,7 +1,7 @@
 #!/bin/bash
 
-version="Leap_15.0"
-version="Tumbleweed"
+#version="Leap_15.0"
+#version="Tumbleweed"
 tumbleweed="Tumbleweed"
 version_tumbleweed_alt="openSUSE_Factory"
 string="You need to check out the openSUSE version for the repository URLs"
