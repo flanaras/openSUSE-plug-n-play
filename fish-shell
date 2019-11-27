@@ -10,11 +10,11 @@ fi
 
 cd rest
 ## Add fzf to fish
-shell-fish-fzf
+./shell-fish-fzf
 
 ## Install oh-my-fish
-shell-fish-omf
+./shell-fish-omf
 
 ## omf bang bang
-shell-fish-omf-bb
+./shell-fish-omf-bb
 cd -
