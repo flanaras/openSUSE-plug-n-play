@@ -83,6 +83,13 @@ cmd="$cmd make patch autoconf automake cmake"
 cmd="$cmd gcc gcc-c++"
 cmd="$cmd tree"
 
+# Java
+## jdk8
+cmd="$cmd java-1_8_0-openjdk-devel"
+
+## jdk11
+cmd="$cmd java-11-openjdk-devel"
+
 # Tex and TexMaker can be necessary, although it is highly possible
 # that more that the standard packages will be needed
 # cmd="$cmd texlive"
