@@ -10,7 +10,7 @@ cd $temp
 FILENAME_VIBER=viber.rpm
 rm $FILENAME_VIBER
 DL_PACKAGE_VIBER=https://download.cdn.viber.com/desktop/Linux/$FILENAME_VIBER
-#wget $DL_PACKAGE_VIBER
+wget $DL_PACKAGE_VIBER
 packages="$packages $FILENAME_VIBER"
 
 # TeamViewer
@@ -18,9 +18,9 @@ FILENAME_TEAMVIEWER=teamviewer-suse.x86_64.rpm
 FILENAME_TEAMVIEWER_KEY=TeamViewer2017.asc
 rm $FILENAME_TEAMVIEWER $FILENAME_TEAMVEIWER_KEY	
 DL_PACKAGE_TEAMVIEWER=https://download.teamviewer.com/download/linux/$FILENAME_TEAMVIEWER
-#wget https://download.teamviewer.com/download/linux/signature/$FILENAME_TEAMVIEWER_KEY
+wget https://download.teamviewer.com/download/linux/signature/$FILENAME_TEAMVIEWER_KEY
 keys="$keys\nsudo rpm --import $FILENAME_TEAMVIEWER_KEY"
-#wget $DL_PACKAGE_TEAMVIEWER
+wget $DL_PACKAGE_TEAMVIEWER
 packages="$packages $FILENAME_TEAMVIEWER"
 
 # Skype
@@ -28,9 +28,9 @@ FILENAME_SKYPE=skypeforlinux-64.rpm
 FILENAME_SKYPE_KEY=repomd.xml.key
 rm $FILENAME_SKYPE $FILENAME_SKYPE_KEY	
 DL_PACKAGE_SKYPE=https://go.skype.com/$FILENAME_SKYPE
-#wget https://repo.skype.com/rpm/stable/repodata/$FILENAME_SKYPE_KEY
+wget https://repo.skype.com/rpm/stable/repodata/$FILENAME_SKYPE_KEY
 keys="$keys\nsudo rpm --import $FILENAME_SKYPE_KEY"
-#wget $DL_PACKAGE_SKYPE
+wget $DL_PACKAGE_SKYPE
 packages="$packages $FILENAME_SKYPE"
 
 # Chrome
@@ -38,9 +38,9 @@ FILENAME_CHROME=google-chrome-stable_current_x86_64.rpm
 FILENAME_CHROME_KEY=linux_signing_key.pub 
 rm $FILENAME_CHROME $FILENAME_CHROME_KEY	
 DL_PACKAGE_CHROME=https://dl.google.com/linux/direct/$FILENAME_CHROME
-#wget https://dl.google.com/linux/$FILENAME_CHROME_KEY
+wget https://dl.google.com/linux/$FILENAME_CHROME_KEY
 keys="$keys\nsudo rpm --import $FILENAME_CHROME_KEY"
-#wget $DL_PACKAGE_CHROME
+wget $DL_PACKAGE_CHROME
 packages="$packages $FILENAME_CHROME"
 
 # XnView
