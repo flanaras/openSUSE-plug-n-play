@@ -18,5 +18,11 @@ packages="$packages dunst"
 # Touch pad
 packages="$packages xorg-x11-driver-input xf86-input-libinput"
 
+# Battery tray
+packages="$packages xfce4-power-manager"
+
+# NetworkManager applet
+packages="$packages NetworkManager-applet"
+
 # echo packages
 echo $packages
