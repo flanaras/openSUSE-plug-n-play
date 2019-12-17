@@ -1,0 +1,24 @@
+#!/bin/bash
+
+temp=temp
+mkdir $temp
+
+cd $temp
+
+# Chrome
+FILENAME_CHROME=google-chrome-stable_current_x86_64.rpm
+FILENAME_CHROME_KEY=linux_signing_key.pub 
+DL_PACKAGE_CHROME=https://dl.google.com/linux/direct/$FILENAME_CHROME
+
+rm $FILENAME_CHROME $FILENAME_CHROME_KEY	
+
+wget https://dl.google.com/linux/$FILENAME_CHROME_KEY
+wget $DL_PACKAGE_CHROME
+
+echo
+echo sudo rpm --import $FILENAME_CHROME_KEY
+echo $FILENAME_CHROME
+echo
+
+
+cd - > /dev/null 2>&1

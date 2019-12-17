@@ -1,0 +1,21 @@
+#!/bin/bash
+
+temp=temp
+mkdir $temp
+
+cd $temp
+
+# Viber
+
+FILENAME_VIBER=viber.rpm
+DL_PACKAGE_VIBER=https://download.cdn.viber.com/desktop/Linux/$FILENAME_VIBER
+
+rm $FILENAME_VIBER
+wget $DL_PACKAGE_VIBER
+
+echo
+echo $FILENAME_VIBER
+echo
+
+
+cd - > /dev/null 2>&1

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+temp=temp
+mkdir $temp
+
+cd $temp
+
+# Skype
+FILENAME_SKYPE=skypeforlinux-64.rpm
+FILENAME_SKYPE_KEY=repomd.xml.key
+DL_PACKAGE_SKYPE=https://go.skype.com/$FILENAME_SKYPE
+
+rm $FILENAME_SKYPE $FILENAME_SKYPE_KEY
+
+wget https://repo.skype.com/rpm/stable/repodata/$FILENAME_SKYPE_KEY
+wget $DL_PACKAGE_SKYPE
+
+echo
+echo sudo rpm --import $FILENAME_SKYPE_KEY
+echo $FILENAME_SKYPE
+echo
+
+
+cd - > /dev/null 2>&1

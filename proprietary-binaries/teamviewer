@@ -1,0 +1,23 @@
+#!/bin/bash
+
+temp=temp
+mkdir $temp
+
+cd $temp
+
+# TeamViewer
+FILENAME_TEAMVIEWER=teamviewer-suse.x86_64.rpm
+FILENAME_TEAMVIEWER_KEY=TeamViewer2017.asc
+DL_PACKAGE_TEAMVIEWER=https://download.teamviewer.com/download/linux/$FILENAME_TEAMVIEWER
+rm $FILENAME_TEAMVIEWER $FILENAME_TEAMVEIWER_KEY
+
+wget https://download.teamviewer.com/download/linux/signature/$FILENAME_TEAMVIEWER_KEY
+wget $DL_PACKAGE_TEAMVIEWER
+
+echo
+echo sudo rpm --import $FILENAME_TEAMVIEWER_KEY
+echo $FILENAME_TEAMVIEWER
+echo
+
+
+cd - > /dev/null 2>&1
