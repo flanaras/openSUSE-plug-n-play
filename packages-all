@@ -16,6 +16,9 @@ cmd="$cmd gvim"
 # ripgrep
 cmd="$cmd ripgrep"
 
+# stow
+cmd="$cmd stow"
+
 ## -- Media
 
 # Equalizer
