@@ -17,4 +17,10 @@ cd rest
 
 ## omf bang bang
 ./shell-fish-omf-bb
+
+## Install fisher
+./shell-fish-fisher
+
+## fisher add z
+./shell-fish-fisher-z
 cd -
