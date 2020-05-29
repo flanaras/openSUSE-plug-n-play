@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# configure timedatectl for network time synchronisation
+timedatectl set-ntp true
+timedatectl status
