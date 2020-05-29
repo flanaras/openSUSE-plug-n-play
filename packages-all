@@ -13,6 +13,9 @@ cmd="$cmd fish"
 # Vim setup
 cmd="$cmd gvim"
 
+# ripgrep
+cmd="$cmd ripgrep"
+
 ## -- Media
 
 # Equalizer
