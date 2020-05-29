@@ -1,0 +1,8 @@
+#!/usr/bin/fish
+
+# Fish
+## Reload profile
+fzf_key_bindings
+
+## fisher z
+fisher add jethrokuan/z
