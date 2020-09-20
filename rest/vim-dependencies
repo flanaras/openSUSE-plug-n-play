@@ -6,4 +6,7 @@ cmd=
 ## Simple hack to get more vim extensions
 cmd="$cmd gvim"
 
+# Use neovim
+cmd="$cmd neovim"
+
 echo $cmd
