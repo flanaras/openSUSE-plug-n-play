@@ -2,8 +2,6 @@
 
 #version="Leap_15.0"
 #version="Tumbleweed"
-tumbleweed="Tumbleweed"
-version_tumbleweed_alt="openSUSE_Factory"
 string="You need to check out the openSUSE version for the repository URLs"
 
 fish=https://download.opensuse.org/repositories/shells:/fish/openSUSE_$version/
