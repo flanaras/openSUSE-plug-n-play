@@ -6,13 +6,13 @@ tumbleweed="Tumbleweed"
 version_tumbleweed_alt="openSUSE_Factory"
 string="You need to check out the openSUSE version for the repository URLs"
 
-vlc=http://download.videolan.org/pub/vlc/SuSE/$version
-maven=http://download.opensuse.org/repositories/devel:/tools:/building/$version
-packmanessentials=http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_$version/Essentials
-mozilla=http://download.opensuse.org/repositories/mozilla/openSUSE_$version/
-fonts=http://download.opensuse.org/repositories/M17N:/fonts/openSUSE_$version/
-x11_utils=https://download.opensuse.org/repositories/X11:Utilities/openSUSE_$version/
 fish=https://download.opensuse.org/repositories/shells:/fish/openSUSE_$version/
+fonts=http://download.opensuse.org/repositories/M17N:/fonts/openSUSE_$version/
+maven=http://download.opensuse.org/repositories/devel:/tools:/building/$version
+mozilla=http://download.opensuse.org/repositories/mozilla/openSUSE_$version/
+packmanessentials=http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_$version/Essentials
+vlc=http://download.videolan.org/pub/vlc/SuSE/$version
+x11_utils=https://download.opensuse.org/repositories/X11:Utilities/openSUSE_$version/
 
 # Vlc
 ## Install vlc from packman
