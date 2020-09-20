@@ -76,7 +76,8 @@ cmd="$cmd MozillaThunderbird"
 cmd="$cmd sysstat"
 
 # terminal
-cmd="$cmd rxvt-unicode"
+#cmd="$cmd rxvt-unicode"
+cmd="$cmd tilix"
 
 # We love and need git
 cmd="$cmd git"
