@@ -12,6 +12,7 @@ packmanessentials=http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_$versi
 mozilla=http://download.opensuse.org/repositories/mozilla/openSUSE_$version/
 fonts=http://download.opensuse.org/repositories/M17N:/fonts/openSUSE_$version/
 x11_utils=https://download.opensuse.org/repositories/X11:Utilities/openSUSE_$version/
+fish=https://download.opensuse.org/repositories/shells:/fish/openSUSE_$version/
 
 # Vlc
 ## Install vlc from packman
@@ -40,6 +41,11 @@ echo sudo zypper dup --from fonts
 echo sudo zypper ar -cfp 90 $polybar x11-utils
 echo sudo zypper dup --from x11-utils
 echo sudo zypper in polybar
+
+# Fish shell
+echo sudo zypper ar -cfp 90 $fish shells-fish
+echo sudo zypper dup --from shells-fish
+echo sudo zypper in fish
 
 # Maven
 echo sudo zypper ar -cfp 99 $maven devel:tools:building
