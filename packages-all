@@ -42,6 +42,9 @@ cmd="$cmd keepassxc"
 # Run application after inactivity
 cmd="$cmd xautolock"
 
+# Manipulate numlock
+cmd="$cmd numlockx"
+
 ## -- Browsers
 
 # Opera, for an alternative of firefox
@@ -73,7 +76,8 @@ cmd="$cmd MozillaThunderbird"
 cmd="$cmd sysstat"
 
 # terminal
-cmd="$cmd rxvt-unicode"
+#cmd="$cmd rxvt-unicode"
+cmd="$cmd tilix"
 
 # We love and need git
 cmd="$cmd git"
