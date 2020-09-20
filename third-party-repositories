@@ -2,25 +2,19 @@
 
 #version="Leap_15.0"
 #version="Tumbleweed"
-tumbleweed="Tumbleweed"
-version_tumbleweed_alt="openSUSE_Factory"
-string="You need to check out the openSUSE version for the repository URLs"
 
-vlc=http://download.videolan.org/pub/vlc/SuSE/$version
-maven=http://download.opensuse.org/repositories/devel:/tools:/building/$version
-packmanessentials=http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_$version/Essentials
-mozilla=http://download.opensuse.org/repositories/mozilla/openSUSE_$version/
-polybar=http://download.opensuse.org/repositories/home:/sysek/openSUSE_$version/
+fish=https://download.opensuse.org/repositories/shells:/fish/openSUSE_$version/
 fonts=http://download.opensuse.org/repositories/M17N:/fonts/openSUSE_$version/
+mozilla=http://download.opensuse.org/repositories/mozilla/openSUSE_$version/
+packmanessentials=http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_$version/Essentials
+x11_utils=https://download.opensuse.org/repositories/X11:Utilities/openSUSE_$version/
 
-# Vlc
-## Install vlc from packman
-# echo "sudo zypper ar $REPO_VLC vlc"
-# echo "sudo zypper mr -r vlc"
-# echo "sudo zypper in vlc"
-
-echo
-echo -e "\033[1;31m$string\033[0m"
+if [[ -z $version ]]; then
+    string="No openSUSE version provided."
+    echo -e "\033[1;31m$string\033[0m"
+    echo Exiting.
+    exit
+fi
 
 # Packman codecs
 echo sudo zypper ar -cfp 90 $packmanessentials packman-essentials 
@@ -30,18 +24,16 @@ echo sudo zypper dup --from packman-essentials
 echo sudo zypper ar -cfp 90 $mozilla mozilla
 echo sudo zypper dup --from mozilla
 
-echo -e "\033[1;31m$string\033[0m"
-
 # Fonts
 echo sudo zypper ar -cfp 90 $fonts fonts
 echo sudo zypper dup --from fonts
 
-# Polybar
-echo sudo zypper ar -cfp 99 $polybar polybar
+# X11-utils 
+echo sudo zypper ar -cfp 90 $polybar x11-utils
+echo sudo zypper dup --from x11-utils
 echo sudo zypper in polybar
 
-# Maven
-echo sudo zypper ar -cfp 99 $maven devel:tools:building
-echo sudo zypper mr -r devel:tools:building
-echo sudo zypper in maven
-echo -e "\033[1;31m$string\033[0m"
+# Fish shell
+echo sudo zypper ar -cfp 90 $fish shells-fish
+echo sudo zypper dup --from shells-fish
+echo sudo zypper in fish
