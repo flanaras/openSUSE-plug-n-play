@@ -42,6 +42,9 @@ cmd="$cmd keepassxc"
 # Run application after inactivity
 cmd="$cmd xautolock"
 
+# Manipulate numlock
+cmd="$cmd numlockx"
+
 ## -- Browsers
 
 # Opera, for an alternative of firefox
