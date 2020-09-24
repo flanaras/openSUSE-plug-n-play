@@ -36,6 +36,9 @@ cmd="$cmd okular"
 # Image editor
 cmd="$cmd gthumb"
 
+# Screen capturer
+cmd="$cmd flameshot"
+
 # Keepassxc
 cmd="$cmd keepassxc"
 
