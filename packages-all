@@ -58,6 +58,12 @@ cmd="$cmd opera"
 # VM necessities
 cmd="$cmd virtualbox"
 
+## Fun stuff
+# Cowsay
+cmd="$cmd cowsay"
+
+# Fortune 
+cmd="$cmd fortune"
 
 ##### ----- Work touches ----- #####
 
