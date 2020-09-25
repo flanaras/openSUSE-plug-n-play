@@ -36,6 +36,12 @@ cmd="$cmd okular"
 # Image editor
 cmd="$cmd gthumb"
 
+# Video player
+cmd="$cmd vlc"
+
+# Screen capturer
+cmd="$cmd flameshot"
+
 # Keepassxc
 cmd="$cmd keepassxc"
 
@@ -55,6 +61,12 @@ cmd="$cmd opera"
 # VM necessities
 cmd="$cmd virtualbox"
 
+## Fun stuff
+# Cowsay
+cmd="$cmd cowsay"
+
+# Fortune 
+cmd="$cmd fortune"
 
 ##### ----- Work touches ----- #####
 
