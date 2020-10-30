@@ -29,7 +29,7 @@ echo sudo zypper ar -cfp 90 $fonts fonts
 echo sudo zypper dup --from fonts
 
 # X11-utils 
-echo sudo zypper ar -cfp 90 $polybar x11-utils
+echo sudo zypper ar -cfp 90 $x11_utils x11-utils
 echo sudo zypper dup --from x11-utils
 echo sudo zypper in polybar
 
