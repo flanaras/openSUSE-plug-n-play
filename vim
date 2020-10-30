@@ -6,7 +6,7 @@ cd rest
 # Install
 ## if parameter is set
 if [ "$1" = "install" ] || [ "$1" = "in" ]; then
-	sudo zypper in ./vim-dependencies
+	sudo zypper in `./vim-dependencies`
 fi
 
 #* Configurations
