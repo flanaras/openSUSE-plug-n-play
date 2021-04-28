@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+set -e
+
+#repostitory=mattermost/desktop
+folder_link=mattermost-desktop
+
+get_latest_release() {
+  curl --silent "https://api.github.com/repos/$repostitory/releases/latest" | # Get latest release from GitHub api
+    grep '"tag_name":' |                                            # Get tag line
+    sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
+}
+
+echo_sudo () {
+	echo \[sudo\] for \'"$@"\'
+	sudo "$@"
+}
+
+restartMattermost() {
+	killall mattermost-desktop
+	mattermost-desktop &
+	disown
+}
+
+stripColor() {
+    echo $1 | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g"
+}
+
+newVersionAvailable() {
+    env DISPLAY=:0 i3-nagbar -t warning -m "new update for $1: $2 -> $3" > /dev/null 2>&1
+}
+
+rgi() {
+    rg -i $@
+}
+
+latestGithubVersion() {
+    echo `curl -s https://api.github.com/repos/$1/releases/latest`
+}
+
+download() {
+    wget -q --show-progress $1
+}
+
+printVersionMessage() {
+    echo App: $1
+    echo local: $2
+    echo remote: $3
+}
+
+runningLatestVersionMessage() {
+    echo running latest version
+}
+
+filter_cmd='rg -i'
+#latest=`echo $response | jq -r '.assets[].browser_download_url' | $filter`
+#filename=`echo $response | jq -r '.assets[].name' | $filter`
+#folder_name=${filename%\.tar\.gz}
+
+#cd ~/Downloads
+
+#echo Downloading
+
+#echo Extracting
+#tar xfz $filename
+#rm $filename
+
+#echo Moving
+#echo_sudo mv $folder_name /opt
+#echo_sudo rm /opt/$folder_link
+
+#cd -
+#cd /opt
+
+#sudo ln -s $folder_name $folder_link
+
+#restartMattermost
+
+#cd -

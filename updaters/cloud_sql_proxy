@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+base=`dirname $0`
+source "$base/updater-lib"
+
+repository=GoogleCloudPlatform/cloudsql-proxy
+response=`latestGithubVersion $repository`
+
+version_remote=`echo $response | jq -r '.tag_name' | sed 's/v//g'`
+version_local=`cloud_sql_proxy -version | sed 's/\+.*//g' | sed 's/[^0-9.]//g'` 
+
+printVersionMessage $repository $version_local $version_remote
+
+if [ "$version_local" = "$version_remote" ]; then
+    runningLatestVersionMessage
+    exit
+else
+    newVersionAvailable $repository $version_local $version_remote
+
+    cd ~/bin
+    rm cloud_sql_proxy -f
+    download "https://storage.googleapis.com/cloudsql-proxy/v$version_remote/cloud_sql_proxy.linux.amd64"
+    mv cloud_sql_proxy.linux.amd64 cloud_sql_proxy
+    chmod +x cloud_sql_proxy
+fi
