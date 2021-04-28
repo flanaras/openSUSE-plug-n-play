@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+base=`dirname $0`
+
+$base/spotify-client
+$base/k9s
+$base/cloud_sql_proxy
+$base/proton-bridge
+$base/viber

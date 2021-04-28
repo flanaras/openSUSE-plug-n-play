@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+base=`dirname $0`
+source "$base/updater-lib"
+
+repository=derailed/k9s
+response=`latestGithubVersion $repository`
+
+version_remote=`echo $response | jq -r '.name'`
+version_local=`k9s version | grep Version | awk '{print $2}'` 
+version_local=`stripColor $version_local`
+
+printVersionMessage $repository $version_local $version_remote
+
+if [ "$version_local" = "$version_remote" ]; then
+    runningLatestVersionMessage
+    exit
+else
+    newVersionAvailable $repository $version_local $version_remote
+
+    filter='Linux_x86_64'
+    latest=`echo $response | jq -r '.assets[].browser_download_url' | rgi $filter`
+
+    cd `mktemp -d`
+    download $latest
+    tar xvfz `basename $latest`
+    mv k9s ~/bin
+fi

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+base=`dirname $0`
+source "$base/updater-lib"
+
+name=spotify-client
+
+version_remote=`curl -s https://repository-origin.spotify.com/pool/non-free/s/spotify-client/ | rgi deb --color never | sort -r | head -n 1 | cut -d \" -f 2 | sed 's/_amd64.deb//g' | sed 's/spotify-client.//g'`
+version_local=`rpm -q spotify-client | sed 's/.x86_64//g' | sed 's/spotify-client.//g' | sed 's/-/./g'` 
+
+printVersionMessage $name $version_local $version_remote
+
+if [ "$version_local" = "$version_remote" ]; then
+    echo running latest version
+    exit
+else
+    newVersionAvailable $name $version_local $version_remote
+
+    #cd ~/Downloads
+    #rpmLink=`echo $response | jq -r .RpmFile`
+    #download $rpmLink
+    #gnomesu -c "zypper in `basename $rpmLink`"
+    #rm `basename $rpmLink`
+    #cd - > /dev/null 2>&1
+fi
